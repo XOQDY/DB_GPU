@@ -27,3 +27,9 @@ class WarehouseDao:
         statement = select(self.__warehouse).filter_by(self.__warehouse.quantity > 0)
         result = self.__session.execute(statement).all()
         return result
+
+    def create_new_warehouse(self, warehouse: WarehouseModel):
+        self.__session.add(warehouse)
+        self.__session.commit()
+        print(f"Insert Data: id = {warehouse.id}, price = {warehouse.price}, quantity = {warehouse.quantity}, "
+              f"zone = {warehouse.zone} Complete!")
