@@ -1,16 +1,16 @@
 CREATE TABLE IF NOT EXISTS gpu (
-    gpu_id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
     name varchar(255)    NOT NULL,
     asic varchar(255),
-    vendor_id varchar(255) NOT NULL,
-    device_id varchar(255) NOT NULL,
-    integrated       INTEGER DEFAULT 0,
+    vendor varchar(255) NOT NULL,
+    device varchar(255) NOT NULL,
+    apu       INTEGER DEFAULT 0,
     mobile_part    INTEGER DEFAULT 0,
-    FOREIGN KEY (gpu_id) REFERENCES warehouse(product_id)
+    FOREIGN KEY (id) REFERENCES warehouse(id)
 );
 
 CREATE TABLE IF NOT EXISTS warehouse (
-    product_id     INTEGER PRIMARY KEY AUTOINCREMENT,
+    id     INTEGER PRIMARY KEY AUTOINCREMENT,
     price          INTEGER DEFAULT 0,
     quantity       INTEGER DEFAULT 0,
     zone           varchar(3) NOT NULL,
