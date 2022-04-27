@@ -10,12 +10,12 @@ class WarehouseGPUDao:
         self.__gpu = GPUModel
         self.__warehouse = WarehouseModel
 
-    def get_all_gpu_by_zone(self, zone):
+    def get_all_gpu_by_zone(self):
         statement = select(self.__gpu, self.__warehouse).join(self.__warehouse, self.__gpu.id == self.__warehouse.id)
         result = self.__session.execute(statement).all()
         return result
 
-    def get_name_zone_by_zone(self, zone):
+    def get_name_zone_by_zone(self):
         statement = select(self.__gpu.name, self.__warehouse.zone).join(self.__warehouse, self.__gpu.id ==
                                                                         self.__warehouse.id)
         result = self.__session.execute(statement).all()

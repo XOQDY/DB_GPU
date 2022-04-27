@@ -16,8 +16,8 @@ print(warehouse_gpu.warehouse().get_all_by_zone(random.choice(string.ascii_lette
 print(warehouse_gpu.warehouse().get_all_by_smaller_price(random.randint(7000, 35000)))
 print(warehouse_gpu.warehouse().get_all_have())
 
-print(warehouse_gpu.warehouse_gpu().get_all_gpu_by_zone(random.choice(string.ascii_letters)))
-print(warehouse_gpu.warehouse_gpu().get_name_zone_by_zone(random.choice(string.ascii_letters)))
+print(warehouse_gpu.warehouse_gpu().get_all_gpu_by_zone())
+print(warehouse_gpu.warehouse_gpu().get_name_zone_by_zone())
 
 
 warehouse_gpu.warehouse().add_new_stock_warehouse(product_id=random.randint(1, 857), quantity=random.randint(1, 100))
