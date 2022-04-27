@@ -23,12 +23,12 @@ class GPUDao:
         result = self.__session.execute(statement).all()
         return result
 
-    def get_all_by_id(self, id):
+    def get_all_by_id(self, id: int):
         statement = select(self.__gpu).filter_by(id=id)
         result = self.__session.execute(statement).all()
         return result
 
-    def get_name_mobile_part_by_mobile_part(self, mobile_part):
+    def get_name_mobile_part_by_mobile_part(self, mobile_part: int):
         statement = select(self.__gpu.name, self.__gpu.mobile_part).filter_by(mobile_part=mobile_part)
         result = self.__session.execute(statement).all()
         return result
