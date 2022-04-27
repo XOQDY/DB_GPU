@@ -34,4 +34,4 @@ class WarehouseDao:
         self.__session.commit()
 
         statement = self.__session.query(self.__warehouse).filter(self.__warehouse.id == product_id).first()
-        print(f"Now Product_id: {statement.product_id} have {statement.quantity} pcs. in stock")
+        print(f"Now Product_id: {statement.id} have {statement.quantity} pcs. in stock")
