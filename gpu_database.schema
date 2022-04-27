@@ -11,7 +11,6 @@ CREATE TABLE IF NOT EXISTS gpu (
 
 CREATE TABLE IF NOT EXISTS warehouse (
     id     INTEGER PRIMARY KEY AUTOINCREMENT,
-    product_id     INTEGER DEFAULT 0,
     price          INTEGER DEFAULT 0,
     quantity       INTEGER DEFAULT 0,
     zone           varchar(3) NOT NULL

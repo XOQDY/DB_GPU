@@ -7,6 +7,7 @@ Base = declarative_base()
 class WarehouseModel(Base):
     __tablename__ = "warehouse"
     id = Column(Integer, primary_key=True)
+    product_id = Column(Integer, nullable=False)
     price = Column(Integer, nullable=False)
     quantity = Column(Integer, nullable=False)
     zone = Column(Text, nullable=False)

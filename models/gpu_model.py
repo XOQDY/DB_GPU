@@ -15,5 +15,6 @@ class GPUModel(Base):
     mobile_part = Column(Integer, nullable=False)
 
     def __repr__(self) -> str:
-        return f"<GPU Information: id = {self.id}, name = {self.name}, asic/codename = {self.asic}, vendor id = {self.vendor}, " \
-               f"device id = {self.device}, integrated/apu = {self.apu}, discrete mobile part = {self.mobile_part}>"
+        return f"<GPU Information: id = {self.id}, name = {self.name}, asic/codename = {self.asic}, " \
+               f"vendor id = {self.vendor}, device id = {self.device}, integrated/apu = {self.apu}, " \
+               f"discrete mobile part = {self.mobile_part}>"

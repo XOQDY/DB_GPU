@@ -2,7 +2,6 @@ import random
 import string
 
 from utils.warehouse_gpu import WarehouseGPU
-from models.warehouse_model import WarehouseModel
 
 warehouse_gpu = WarehouseGPU()
 
@@ -20,6 +19,5 @@ print(warehouse_gpu.warehouse().get_all_have())
 print(warehouse_gpu.warehouse_gpu().get_all_gpu_by_zone(random.choice(string.ascii_letters)))
 print(warehouse_gpu.warehouse_gpu().get_name_zone_by_zone(random.choice(string.ascii_letters)))
 
-new_warehouse = WarehouseModel(id=40, price=9165, quantity=20, zone="A")
 
-warehouse_gpu.warehouse().create_new_warehouse(new_warehouse)
+warehouse_gpu.warehouse().create_new_warehouse(product_id=random.randint(1, 857), quantity=random.randint(1, 100))

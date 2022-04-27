@@ -28,8 +28,10 @@ class WarehouseDao:
         result = self.__session.execute(statement).all()
         return result
 
-    def create_new_warehouse(self, warehouse: WarehouseModel):
-        self.__session.add(warehouse)
+    def create_new_warehouse(self, product_id, quantity):
+        self.__session.query(self.__warehouse).filter(self.__warehouse.id == product_id)\
+            .update({self.__warehouse.quantity: self.__warehouse.quantity + quantity})
         self.__session.commit()
-        print(f"Insert Data: id = {warehouse.id}, price = {warehouse.price}, quantity = {warehouse.quantity}, "
-              f"zone = {warehouse.zone} Complete!")
+
+        statement = self.__session.query(self.__warehouse).filter(self.__warehouse.id == product_id).first()
+        print(f"Now Product_id: {statement.product_id} have {statement.quantity} pcs. in stock")
