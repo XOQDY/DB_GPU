@@ -20,4 +20,4 @@ print(warehouse_gpu.warehouse_gpu().get_all_gpu_by_zone(random.choice(string.asc
 print(warehouse_gpu.warehouse_gpu().get_name_zone_by_zone(random.choice(string.ascii_letters)))
 
 
-warehouse_gpu.warehouse().create_new_warehouse(product_id=random.randint(1, 857), quantity=random.randint(1, 100))
+warehouse_gpu.warehouse().add_new_stock_warehouse(product_id=random.randint(1, 857), quantity=random.randint(1, 100))

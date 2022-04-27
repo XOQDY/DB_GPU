@@ -28,7 +28,7 @@ class WarehouseDao:
         result = self.__session.execute(statement).all()
         return result
 
-    def create_new_warehouse(self, product_id, quantity):
+    def add_new_stock_warehouse(self, product_id, quantity):
         self.__session.query(self.__warehouse).filter(self.__warehouse.id == product_id)\
             .update({self.__warehouse.quantity: self.__warehouse.quantity + quantity})
         self.__session.commit()
