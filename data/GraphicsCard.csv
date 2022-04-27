@@ -1,5 +1,4 @@
-﻿GPUKey,Name,ASIC/Codename,Vendor ID,Device ID,Integrated/APU,Discrete Mobile Part
-1,AMD FirePro 2270 (ATI FireGL),,0x1002,0x68F2,0,0
+﻿1,AMD FirePro 2270 (ATI FireGL),,0x1002,0x68F2,0,0
 2,AMD FirePro 2270,,0x1002,0x68F2,0,0
 3,AMD FirePro 2460,,0x1002,0x68F1,0,0
 4,AMD FirePro A300 Series (FireGL V) Graphics Adapter,Trinity_Workstation,0x1002,0x9906,1,0

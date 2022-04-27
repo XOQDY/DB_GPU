@@ -6,12 +6,13 @@ CREATE TABLE IF NOT EXISTS gpu (
     device varchar(255) NOT NULL,
     apu       INTEGER DEFAULT 0,
     mobile_part    INTEGER DEFAULT 0,
-    FOREIGN KEY (id) REFERENCES warehouse(id)
+    FOREIGN KEY (id) REFERENCES warehouse(product_id)
 );
 
 CREATE TABLE IF NOT EXISTS warehouse (
     id     INTEGER PRIMARY KEY AUTOINCREMENT,
+    product_id     INTEGER DEFAULT 0,
     price          INTEGER DEFAULT 0,
     quantity       INTEGER DEFAULT 0,
-    zone           varchar(3) NOT NULL,
+    zone           varchar(3) NOT NULL
 );
