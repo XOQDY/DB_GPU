@@ -26,9 +26,6 @@ For now we don't have GUI or Website to see the result but you can see the query
 ```
 python main.py run
 ```
-## Domain class diagram
-![UML class](https://user-images.githubusercontent.com/78094325/165640172-543216b6-a0ca-4888-bc11-d639ede2dc14.png)
-## Design class diagram
-![design class](https://user-images.githubusercontent.com/78094325/165640025-67368872-354b-4a0b-a1f2-35769a7424c5.png)
-## Package class diagram
-![package class](https://user-images.githubusercontent.com/78094325/165644105-1a0c02b5-48d9-470e-ae5e-76b94bcce30d.png)
+## Project Documents
+[Diagram](../../wiki/Diagram)  
+[API](../../wiki/Web%20Service%20API)
