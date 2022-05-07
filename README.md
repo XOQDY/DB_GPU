@@ -28,4 +28,4 @@ python main.py run
 ```
 ## Project Documents
 [Diagram](../../wiki/Diagram)  
-[API](../../wiki/Web%20Service%20API)
+[Web Service API](../../wiki/Web%20Service%20API)
